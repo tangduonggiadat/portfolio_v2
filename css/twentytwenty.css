@@ -32,7 +32,8 @@
     position: absolute;
     top: 0;
     display: block; 
-  background-size: cover;}
+  background-size: cover;
+}
 .twentytwenty-handle {
   height: 38px;
   width: 38px;
