@@ -48,7 +48,7 @@ $(document).ready(function () {
   }, 1000);
 });
 
-const bg_color_options = ["img/i1.jpg", "img/i2.jpg", "img/i3.jpg", "img/i4.jpg"];
+const bg_color_options = ["img/n1.jpg", "img/i2.jpg", "img/i3.jpg", "img/i4.jpg"];
 //const text_color_options = ["#000", "#fff", "#000", "#fff"];
 const arrow_color_options = [
 
@@ -87,7 +87,8 @@ function slide(
   slides_container.addEventListener("touchmove", dragAction);
 
   slideshow_container.style.background = 'url("' + bg_color_options[k] + '")';
-  slideshow_container.style.objectFit = 'fill'
+  slideshow_container.style.backgroundSize = 'cover'
+  slideshow_container.style.backgroundPosition = 'center'
   $(".previous-arrow").css(
     "background-image",
     'url("' + arrow_color_options[k] + '")'
@@ -112,7 +113,8 @@ function slide(
     }
     k = k - 1;
     slideshow_container.style.background = 'url("' + bg_color_options[k] + '")';
-    slideshow_container.style.objectFit = 'fill'
+    slideshow_container.style.backgroundSize = 'cover'
+    slideshow_container.style.backgroundPosition = 'center'
     $(".previous-arrow").css(
       "background-image",
       'url("' + arrow_color_options[k] + '")'
@@ -136,7 +138,8 @@ function slide(
     k = k + 1;
     k = k % bg_color_options.length;
     slideshow_container.style.background = 'url("' + bg_color_options[k] + '")';
-    slideshow_container.style.objectFit = 'fill'
+    slideshow_container.style.backgroundSize = 'cover'
+    slideshow_container.style.backgroundPosition = 'center'
     $(".previous-arrow").css(
       "background-image",
       'url("' + arrow_color_options[k] + '")'
@@ -188,7 +191,8 @@ function slide(
       k = k + 1;
       k = k % bg_color_options.length;
       slideshow_container.style.background = 'url("' + bg_color_options[k] + '")';
-      slideshow_container.style.objectFit = 'fill'
+      slideshow_container.style.backgroundSize = 'cover'
+      slideshow_container.style.backgroundPosition = 'center'
       $(".previous-arrow").css(
         "background-image",
         'url("' + arrow_color_options[k] + '")'
@@ -209,7 +213,8 @@ function slide(
       }
       k = k - 1;
       slideshow_container.style.background = 'url("' + bg_color_options[k] + '")';
-        slideshow_container.style.objectFit = 'fill'
+      slideshow_container.style.backgroundSize = 'cover'
+      slideshow_container.style.backgroundPosition = 'center'
       $(".previous-arrow").css(
         "background-image",
         'url("' + arrow_color_options[k] + '")'
@@ -309,4 +314,6 @@ function parallaxIt(target, movement) {
 $(window).on("resize scroll", function () {
   slideshow_parameters = $(".slideshow-container")[0].getBoundingClientRect();
 });
+
+//nhap
 
